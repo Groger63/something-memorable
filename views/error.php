@@ -13,6 +13,13 @@
                                 <br/>
                             </section>
                             <section class="news">
+								<?php
+								if (isset($errorView)) {
+								foreach ($errorView as $value){
+								    echo $value;
+								}
+								}
+								?>
                             </section>
                         </section>
                     	<br/>
