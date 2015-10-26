@@ -1,11 +1,17 @@
 <?php
 
 
+class frontController{
+
+		
+	function __construct() {
+		global $rep, $view;
 	echo "okcontroller";
-				echo ($view["error"]);
+				require($view["error"]);
 
 	echo "okcontroller";
-
+}
+}
 
 
 ?>
