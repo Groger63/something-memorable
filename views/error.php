@@ -13,13 +13,6 @@
                                 <br/>
                             </section>
                             <section class="news">
-								<?php
-								if (isset($dVueEreur)) {
-								foreach ($dVueEreur as $value){
-								    echo $value;
-								}
-								}
-								?>
                             </section>
                         </section>
                     	<br/>
