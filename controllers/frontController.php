@@ -1,7 +1,7 @@
 <?php
 	echo "okcontroller";
-				$dVueEreur[] =	"action \"".$action."\" inconnue controladmin";
-				require ($rep.$vues['error']);
+				$dVueEreur[] =	"ceci est une réussite!";
+				require ($vues['error']);
 
 
 

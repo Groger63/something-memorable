@@ -12,7 +12,7 @@ $base = "db1508613";
 $host = "eu-cdbr-azure-west-c.cloudapp.net";
 
 //Liste des vues
-$view['error']='view/error.php';
+$view['error']=$rep.'view/error.php';
 
 
 ?>

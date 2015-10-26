@@ -1,0 +1,21 @@
+New commit
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   config/autoload.php
+#	new file:   config/config.php
+#	new file:   controllers/front-controller.php
+#	new file:   db/BD.php
+#	modified:   index.php
+#	new file:   views/error.php
+#	new file:   views/footer.html
+#	new file:   views/header.php
+#	new file:   views/images/arrowtop.png
+#	new file:   views/images/flux.png
+#	new file:   views/images/wallpaper.jpg
+#	new file:   views/images/wallpaper1.jpg
+#	new file:   views/style.css
+#
