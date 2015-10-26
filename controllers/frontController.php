@@ -2,8 +2,8 @@
 				$dVueEreur[] =	"ceci est une réussite!";
 
 	echo "okcontroller";
-				require ($view['error']);
-				
+				require ("./../views/error.php");
+
 	echo "okcontroller";
 
 
