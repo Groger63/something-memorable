@@ -1,7 +1,7 @@
 <?php
 	
 				$dVueEreur[] =	"action \"".$action."\" inconnue controladmin";
-				require ($rep.$vues['erreur']);
+				require ($rep.$vues['error']);
 
 
 
