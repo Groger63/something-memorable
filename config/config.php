@@ -1,7 +1,7 @@
 <?php
 
 //Définition du repertoire de travail courrant
-$rep=__DIR__.'/../';
+$rep=realpath(dirname(__FILE__)).'/../';
 
 
 
@@ -12,7 +12,7 @@ $base = "db1508613";
 $host = "eu-cdbr-azure-west-c.cloudapp.net";
 
 //Liste des vues
-$view['error']=$rep.'view/error.php';
+$view['error']='views/error.php';
 
 
 ?>

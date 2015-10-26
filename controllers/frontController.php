@@ -1,17 +1,7 @@
 <?php
+				$dVueEreur[] =	"ceci est une réussite!";
+				require ($view['error']);
 
-
-class frontController{
-
-		
-	function __construct() {
-		global $rep, $view;
-	echo "okcontroller";
-				require($view["error"]);
-
-	echo "okcontroller";
-}
-}
 
 
 ?>
