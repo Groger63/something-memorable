@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="/Projet_final/vues/style.css" />
+        <link rel="stylesheet" href= "/views/style.css" />
         <title>Rss Hub</title>
     </head>
     <body>
