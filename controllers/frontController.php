@@ -2,7 +2,7 @@
 
 
 	echo "okcontroller";
-				require ($view["error"]);
+				echo ($view["error"]);
 
 	echo "okcontroller";
 
