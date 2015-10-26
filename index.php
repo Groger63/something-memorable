@@ -5,7 +5,7 @@ echo "ok";
 //chargement autoloader pour autochargement des classes
 require_once(__DIR__.'/config/autoload.php');
 echo "ok";
-Autoload::charger();
+Autoload::load();
 echo "ok";
 
 //Lancement du front controller
