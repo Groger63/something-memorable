@@ -16,7 +16,9 @@
 								<?php
 								if (isset($errorView)) {
 								foreach ($errorView as $value){
-								    echo $value;
+								    foreach ($value as $uniquevalue){
+                                        echo $uniquevalue;
+                                    }
 								}
 								}
 								?>
