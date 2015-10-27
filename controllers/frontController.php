@@ -9,7 +9,7 @@ class frontController{
 
 
 				$data=DAL::getSomething();
-				$errorView[] =	"ceci est une réussite!";
+				$errorView[] =	$data;
 				require_once ($view['error']);
 
 
