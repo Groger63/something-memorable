@@ -6,8 +6,11 @@ class frontController{
 
 
 				global $rep, $view;
+
+
+				$data=DAL::getSomething();
 				$errorView[] =	"ceci est une réussite!";
-				require ($view['error']);
+				require_once ($view['error']);
 
 
 		}
