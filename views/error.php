@@ -17,7 +17,10 @@
 								if (isset($errorView)) {
 								foreach ($errorView as $value){
 								    foreach ($value as $uniquevalue){
-                                        echo $uniquevalue;
+
+                                        foreach ($uniquevalue as $uniquevalue1){
+                                            echo $uniquevalue1;
+                                        }
                                     }
 								}
 								}
