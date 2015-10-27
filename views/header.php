@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href= "/views/style.css" />
+        <link rel="stylesheet" href= "views/style.css" />
         <title>Rss Hub</title>
     </head>
     <body>
@@ -40,7 +40,7 @@
                         <section class="panel">
                              <header>
                                  <a href="Accueil">
-                                    <h1><img src="/Projet_final/vues/images/flux.png" alt="Flux Rss" title="Flux Rss"/> Rss Hub</h1>
+                                    <h1><img src="views/images/flux.png" alt="Flux Rss" title="Flux Rss"/> Rss Hub</h1>
                                 </a>
                             </header>
 						<?php 
@@ -151,7 +151,7 @@
                             <br/>
                             <section class="btn_top">
                                 <a href="#">
-                                    <img src="/Projet_final/vues/images/arrowtop.png" alt="logo">
+                                    <img src="views/images/arrowtop.png" alt="logo">
                                 </a>
                             </section>
                         </section>
