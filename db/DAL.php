@@ -2,11 +2,17 @@
 
 class DAL{
 
-	static function  getSomething()
+	static function  getUsers()
 	{
 		$req='SELECT * FROM user';
-		$res= BD::getInstance()->prepareAndExecuteQueryWithResult($req);
-		return $res;
+		$res= BD::getInstance()->prepareAndExecuteQueryWithResult($req,'');
+		$users = array();
+		foreach ($res as $user) {
+			$users[]=new user($user["name"],$user["function"]);
+		}
+
+
+		return $users;
 	}
 
 

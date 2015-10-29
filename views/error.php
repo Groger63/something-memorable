@@ -1,33 +1,31 @@
 <?php include('header.php');?>
 
-					<td align="center">
-                        <br/>
-                        <br/>
-						<section class="newsbox">
-                            <section class="newstitle">
-                                <section class="titrenews">
-                               	<h1>
-                                	Erreur !
-                                </h1>
-                                </section>
-                                <br/>
-                            </section>
-                            <section class="news">
-								<?php
-								if (isset($errorView)) {
-								foreach ($errorView as $value){
-								    foreach ($value as $uniquevalue){
+            <section id="one" class="wrapper style1">
+                <div class="inner">
+                                                <?php
+                                if (isset($data)) {
+                                    $count = 0;
+                                foreach ($data as $value){
+                                    echo '
+                    <article class="feature ';
+                    echo (($count%2 == 0) ? 'right"':'left"').'>
+                        <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+                        <div class="content">
+                            <h2>'.$value->getName().'</h2>
+                            <p>'.$value->getFunction().'</p>
+                            <ul class="actions">
+                                <li>
+                                    <a href="#" class="button alt">More</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>';
+                    $count ++;
+                }
+                }?>
 
-                                        foreach ($uniquevalue as $uniquevalue1){
-                                            echo $uniquevalue1;
-                                        }
-                                    }
-								}
-								}
-								?>
-                            </section>
-                        </section>
-                    	<br/>
-				     </td>
+                </div>
+            </section>
+
 <?php include("footer.html");?>
 

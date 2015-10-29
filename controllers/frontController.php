@@ -8,8 +8,8 @@ class frontController{
 				global $rep, $view;
 
 
-				$data=DAL::getSomething();
-				$errorView[] =	$data;
+				$data=userModel::getUsers();
+				//$errorView[] =	$data;
 				require_once ($view['error']);
 
 
