@@ -13,6 +13,7 @@ $host = "eu-cdbr-azure-west-c.cloudapp.net";
 
 //Liste des vues
 $view['error']='views/error.php';
+$view['home']='views/home.php';
 
 
 ?>

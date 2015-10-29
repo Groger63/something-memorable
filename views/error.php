@@ -2,27 +2,22 @@
 
             <section id="one" class="wrapper style1">
                 <div class="inner">
-                                                <?php
-                                if (isset($data)) {
-                                    $count = 0;
-                                foreach ($data as $value){
-                                    echo '
-                    <article class="feature ';
-                    echo (($count%2 == 0) ? 'right"':'left"').'>
-                        <span class="image"><img src="images/pic01.jpg" alt="" /></span>
-                        <div class="content">
-                            <h2>'.$value->getName().'</h2>
-                            <p>'.$value->getFunction().'</p>
-                            <ul class="actions">
-                                <li>
-                                    <a href="#" class="button alt">More</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </article>';
-                    $count ++;
-                }
-                }?>
+                <section id="three" class="wrapper style3 special">
+                    <div class="inner">
+                        <header class="major narrow ">
+                            <h2>ERROR</h2>
+                            <?php 
+                                foreach ($data as $msgerror) {
+                                    echo '<p>'.$msgerror.'</p>';
+                                }
+                            ?>
+
+                            </header>
+                        <ul class="actions">
+                            <li><a href="index.php" class="button big alt">Get me back Home!</a></li>
+                        </ul>
+                    </div>
+                </section>
 
                 </div>
             </section>
