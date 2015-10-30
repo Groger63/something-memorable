@@ -38,7 +38,7 @@
 			$this->displayname=$f;
 		}
 		public function getDisplayname(){
-			return $this->Displayname;
+			return $this->displayname;
 		}
 		public function setPassword($f){
 			$this->displayname=$f;

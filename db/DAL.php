@@ -13,6 +13,19 @@ class DAL{
 		return $users;
 	}
 
+	static function  getUser($username,$pwd)
+	{
+		$req='SELECT * FROM user WHERE username=? AND password_hash=?';
+		$param  = array(0 => array($username, PDO::PARAM_STR) , 1 => array($pwd, PDO::PARAM_STR));
+		$res= BD::getInstance()->prepareAndExecuteQueryWithResult($req,$param);
+		$user=NULL;
+		foreach ($res as $data) {
+			$user=new User($data["username"],$data["display_name"],$data["role"],$data["password_hash"],$data["salt"]);
+		}
+		return $user;
+	}
+
+
 	static function getAllposts(){
 		$req='SELECT * FROM post';
 		$res= BD::getInstance()->prepareAndExecuteQueryWithResult($req,'');

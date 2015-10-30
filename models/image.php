@@ -26,12 +26,13 @@
 		}	
 		private $coordinates;
 		public function getCoordinates(){
-
-
 			$exif = exif_read_data($this->getFile_path());
-			$latitude = $this->gps($exif["GPSLatitude"], $exif['GPSLatitudeRef']);
-			$longitude = $this->gps($exif["GPSLongitude"], $exif['GPSLongitudeRef']);
-			return $latitude.','.$longitude;
+			if(isset($exif["GPSLatitude"])&&isset( $exif['GPSLatitudeRef'])){
+				$latitude = $this->gps($exif["GPSLatitude"], $exif['GPSLatitudeRef']);
+				$longitude = $this->gps($exif["GPSLongitude"], $exif['GPSLongitudeRef']);
+				return $latitude.','.$longitude;
+			}
+			return NULL; 
 		}	
 
 		function __construct($img_id,$username,$post_id,$caption,$file_path,$location){

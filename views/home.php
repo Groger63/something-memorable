@@ -9,12 +9,14 @@
                                     echo '
                     <article class="feature ';
                     echo (($count%2 == 0) ? 'right"':'left"').'>
-                        <span class="image"><img src="images/pic01.jpg" alt="" /></span>
                         <div class="content">
                             <h2>'.$value->getPost_title().'</h2>
                             <p>'.$value->getPost_content().'</p>';
                             foreach ($value->getImagesPost() as $img) {
-                                echo '<img src="'.$img->getFile_path().'"></img><a href="https://www.google.com/maps/place/'.$img->getCoordinates().'">See on the map</a>';
+                                echo '<span class="image"><a target="_blank" href="'.$img->getFile_path().'"><img src="'.$img->getFile_path().'"></img></a></span>';
+                                if(null!==$img->getCoordinates()){
+                                    echo '<a target="_blank"  href="https://www.google.com/maps/place/'.$img->getCoordinates().'">See on the map</a>';
+                                }
                             }
                             echo '<ul class="actions">
                                 <li>
