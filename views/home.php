@@ -11,9 +11,12 @@
                     echo (($count%2 == 0) ? 'right"':'left"').'>
                         <span class="image"><img src="images/pic01.jpg" alt="" /></span>
                         <div class="content">
-                            <h2>'.$value->getName().'</h2>
-                            <p>'.$value->getFunction().'</p>
-                            <ul class="actions">
+                            <h2>'.$value->getPost_title().'</h2>
+                            <p>'.$value->getPost_content().'</p>';
+                            foreach ($value->getImagesPost() as $img) {
+                                echo '<img src="'.$img->getFile_path().'"></img><a href="https://www.google.com/maps/place/'.$img->getCoordinates().'">See on the map</a>';
+                            }
+                            echo '<ul class="actions">
                                 <li>
                                     <a href="#" class="button alt">More</a>
                                 </li>

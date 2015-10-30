@@ -1,24 +1,50 @@
 <?php
 
 	class user{
-		private $name;
-		private $function;
+		private $username;
+		private $displayname;
+		private $role;
+		private $password;
+		private $salt;
 
-		function __construct($n,$f){
-			$this->name = $n;
-			$this->function = $f;
+
+		function __construct($username,$displayname,$role,$password,$salt){
+			$this->username = $username;
+			$this->displayname = $displayname;
+			$this->salt= $salt;
+			$this->password=$password;
+			$this->role = $role;
 		}
-		public function getName(){
-			return $this->name;
+
+		public function setUsername($n){
+			$this->username=$n;
 		}
-		public function getFunction(){
-			return $this->function;
+		public function getUsername(){
+			return $this->username;
 		}
-		public function setName($n){
-			$this->name=$n;
+		public function setRole($f){
+			$this->role=$f;
 		}
-		public function setFunction($f){
-			$this->function=$f;
+		public function getRole(){
+			return $this->role;
+		}
+		public function setSalt($f){
+			$this->salt=$f;
+		}
+		public function getSalt(){
+			return $this->salt;
+		}
+		public function setDisplayname($f){
+			$this->displayname=$f;
+		}
+		public function getDisplayname(){
+			return $this->Displayname;
+		}
+		public function setPassword($f){
+			$this->displayname=$f;
+		}
+		public function getPassword(){
+			return $this->Displayname;
 		}
 	}
 ?>

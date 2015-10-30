@@ -6,8 +6,7 @@
 				global $rep, $view;
 			switch ($action) {//Suivant le rôle, on définit les actions possibles
 				case 'home':
-					$data=userModel::getUsers();
-					//$errorView[] =	$data;
+					$data=postModel::getAllposts();
 					require_once ($view['home']);
 					break;
 
