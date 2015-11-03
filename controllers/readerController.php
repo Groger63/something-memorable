@@ -1,9 +1,9 @@
 <?php
-	abstract class readerController()){
-		private final $SPECIFIC_ACTION=array('action4','action5','action6');
+	 class readerController extends registeredUserController{
+		protected  $SPECIFIC_ACTION=array('logout','likepost','action6');
 
 
-		public function likePost(){
+		public function likepost(){
 			//do something that can be done by reader
 		}
 

@@ -13,9 +13,8 @@
 			$action=isset($_REQUEST['action']) ? $_REQUEST['action'] : 'home' ;
 
 
-			$role = isset($_REQUEST['role']) ? $_REQUEST['role'] : 'unregisteredUser' ;
+			$role = isset($_SESSION['role']) ? $_SESSION['role'] : 'unregisteredUser' ;
 			$controller=$role.'Controller';
-			
 			$cont=new $controller($action);
 			
 
