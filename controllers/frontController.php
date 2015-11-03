@@ -11,16 +11,14 @@
 			session_start();
 
 			$action=isset($_REQUEST['action']) ? $_REQUEST['action'] : 'home' ;
-			switch($action){
-				case "connection" :
-					$cont=new connectionController($action);
-					break;				
-				case "logOff" :
-					$cont=new connectionController($action);
-					break;
-				default:
-					$cont=new homeController($action);
-			}
+
+
+			$role = isset($_REQUEST['role']) ? $_REQUEST['role'] : 'unregisteredUser' ;
+			$controller=$role.'Controller';
+			
+			$cont=new $controller($action);
+			
+
 
 		}
 

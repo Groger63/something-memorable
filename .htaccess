@@ -1,0 +1,6 @@
+RewriteEngine on
+
+RewriteRule Home	index.php
+RewriteRule Connexion	index.php?action=connexion
+RewriteRule Error	index.php?action=error
+RewriteRule Deconnexion	index.php?action=deconnexion

@@ -26,6 +26,7 @@
 		}	
 		private $coordinates;
 		public function getCoordinates(){
+			if($this->coordinates!=NULL)return $this->coordinates;
 			$exif = exif_read_data($this->getFile_path());
 			if(isset($exif["GPSLatitude"])&&isset( $exif['GPSLatitudeRef'])){
 				$latitude = $this->gps($exif["GPSLatitude"], $exif['GPSLatitudeRef']);
@@ -42,9 +43,7 @@
 			$this->caption=$caption;
 			$this->file_path=$file_path;
 			$this->location=$location;
-
-
-
+			$this->coordinate=NULL;
 		}
 		private function gps($coordinate, $hemisphere) {
 		  for ($i = 0; $i < 3; $i++) {

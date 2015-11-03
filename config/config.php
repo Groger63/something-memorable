@@ -16,4 +16,7 @@ $view['error']='views/error.php';
 $view['home']='views/home.php';
 
 
+$role=array('user','reader','author','admin');
+
+
 ?>

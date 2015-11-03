@@ -2,6 +2,7 @@
 
 class DAL{
 
+	///USERS
 	static function  getUsers()
 	{
 		$req='SELECT * FROM user';
@@ -25,6 +26,26 @@ class DAL{
 		return $user;
 	}
 
+	static function addUser($username,$displayname,$role,$password,$salt){
+		$req='INSERT INTO user VALUES(?,?,?,?,?)';
+		$param  = array(0 => array($username, PDO::PARAM_STR) , 1 => array($salt, PDO::PARAM_STR),2 => array($password, PDO::PARAM_STR),3 => array($displayname, PDO::PARAM_STR),4 => array($role, PDO::PARAM_STR));
+		BD::getInstance()->prepareAndExecuteQueryWithResult($req,$param);
+	}
+	
+	static function deleteUser($login){
+		$req='DELETE FROM user WHERE username=?';
+		$param  = array(0 => array($login, PDO::PARAM_STR));
+		BD::getInstance()->prepareAndExecuteQueryWithoutResult($req,$param);
+	}
+	
+	static function changePwd($login,$newPwd){
+		$req='UPDATE user SET password_hash = ? WHERE username=?';
+		$param  = array(0 => array($newPwd, PDO::PARAM_STR),1 => array($login, PDO::PARAM_STR));
+		BD::getInstance()->prepareAndExecuteQueryWithoutResult($req,$param);
+	}
+	
+
+	///POSTS
 
 	static function getAllposts(){
 		$req='SELECT * FROM post';
