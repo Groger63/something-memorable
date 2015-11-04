@@ -3,9 +3,9 @@
             <section id="one" class="wrapper style1">
                 <div class="inner">
                                                 <?php
-                                if (isset($data)) {
+                                if (isset($data['data'])) {
                                     $count = 0;
-                                foreach ($data as $value){
+                                foreach ($data['data'] as $value){
                                     echo '
                     <article class="feature ';
                     echo (($count%2 == 0) ? 'right"':'left"').'>
@@ -28,6 +28,16 @@
                     $count ++;
                 }
                 }?>
+                <nav>
+                    <ul>
+                    <?php 
+                        for($i=1;$i<=$data['pages'];$i++)
+                            echo '<li><a href="index.php?page='.$i.'">Page'.$i.'</a></li>';
+                        ?>
+                    </ul>
+
+
+                </nav>
 
                 </div>
             </section>

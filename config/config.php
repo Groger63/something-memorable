@@ -17,6 +17,6 @@ $view['home']='views/home.php';
 
 
 $role=array('user','reader','author','admin');
-
+$actions=array('logout','deleteaccount','changepassword','changedisplayname','changeprofilepic','login','signup','home','showadventure','kickuser','deletepost','deletecomment','deletephoto','addpost','editpost','vote','likepost','commentpost','editcomment','deletecomment' );
 
 ?>

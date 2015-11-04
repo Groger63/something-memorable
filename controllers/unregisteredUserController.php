@@ -31,6 +31,7 @@
 			$data=array();
 			$data[0]="We're sorry, something somewhere went wrong...";
 			$data[1]="You can't register yet";
+			$data[2]="unregistered user";
 			require_once ($view['error']);
 		}
 
