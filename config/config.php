@@ -6,10 +6,15 @@ $rep=realpath(dirname(__FILE__)).'/../';
 
 
 //DB connection
-$user="root";
-$password = "jsn10081993";
-$base = "dbSomethingMemorable";
-$host = "localhost";
+// $user="root";
+// $password = "jsn10081993";
+// $base = "dbSomethingMemorable";
+// $host = "localhost";
+
+$user="b75f54a35a10bd";
+$password = "91023cc1";
+$base = "db1508613";
+$host = "eu-cdbr-azure-west-c.cloudapp.net";
 
 //Liste des vues
 $view['error']='views/error.php';
