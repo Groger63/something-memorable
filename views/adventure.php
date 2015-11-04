@@ -6,11 +6,24 @@
             <div class="inner">
                 <header class="major narrow ">
                    <?php  
-                   ini_set('display_errors', 1);
-                   ini_set('display_startup_errors', 1);
-                   error_reporting(E_ALL);
-                   echo $post->getPost_id();
-                   echo $post->getPost_content();
+                     echo '<h1>'.$post->getPost_title().'</h1>';
+                     echo '<p>'.$post->getPost_content().'</p>';
+                     if($post->getVote_post()!=NULL){
+                      echo '<P>';
+                        foreach ($post->getVote_post() as $vote) {
+                          echo $vote->getUser()->getDisplayname().' ';
+                       }
+                       echo 'voted for this adventure!</p>';
+                     }
+                     
+
+                    $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'unregisteredUser' ;
+                    $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'unknownuser' ;
+
+                    if($role=="reader"||($role=="author"&&$post->getUsername()!=$username)){
+                      echo '<a href="index.php?action=vote&id_adv='.$post->getPost_id().'&username='.$_SESSION['username'].'">Vote for this story</a>';
+                    }
+
                    ?>
 
                </div>
@@ -19,5 +32,5 @@
        </div>
    </section>
 
-   <?php include("footer.html");?>
+<?php include("footer.html");?>
 

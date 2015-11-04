@@ -18,7 +18,7 @@
 
         <!-- Header -->
             <header id="header" >
-                <h1><a href="index.html">AdventureTime</a></h1>
+                <h1><a href="Home">AdventureTime</a></h1>
                 <a href="#nav">Menu</a>
             </header>
 

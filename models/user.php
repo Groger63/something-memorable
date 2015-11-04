@@ -4,15 +4,13 @@
 		private $username;
 		private $displayname;
 		private $role;
-		private $password;
 		private $salt;
 
 
-		function __construct($username,$displayname,$role,$password,$salt){
+		function __construct($username,$displayname,$role,$salt){
 			$this->username = $username;
 			$this->displayname = $displayname;
 			$this->salt= $salt;
-			$this->password=$password;
 			$this->role = $role;
 		}
 
@@ -39,12 +37,6 @@
 		}
 		public function getDisplayname(){
 			return $this->displayname;
-		}
-		public function setPassword($f){
-			$this->displayname=$f;
-		}
-		public function getPassword(){
-			return $this->Displayname;
 		}
 	}
 ?>

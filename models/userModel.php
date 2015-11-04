@@ -10,6 +10,11 @@
 			$pwd_hash=hash ( "md5", $pwd);
 			return DAL::getUser($username,$pwd_hash);
 		}
+
+		static public function getUserWithoutPassword($username)
+		{
+			return DAL::getUserWithoutPassword($username);
+		}
 			}
 
 ?>

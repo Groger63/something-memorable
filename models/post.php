@@ -22,15 +22,21 @@
 		}
 		private $images;
 		public function getImagesPost(){
-			return DAL::getImagesPost($this->post_id);
+			return $this->images;
+		}
+		private $votes;
+		public function getVote_post(){
+			return $this->votes;
 		}
 
-		function __construct($id,$un,$pt,$pc,$dt){
+		function __construct($id,$un,$pt,$pc,$dt,$img,$votes){
 			$this->post_id=$id;
 			$this->username=$un;
 			$this->post_title=$pt;
 			$this->post_content=$pc;
 			$this->date_time_posted=$dt;
+			$this->images=$img;
+			$this->votes=$votes;
 		}
 
 

@@ -5,7 +5,7 @@
 			return DAL::getAllposts();
 		}
 
-		public static function  getSomePosts($p){
+		public static function getSomePosts($p){
 			$posts=array();
 			$limit=2;
 			$start=($p-1)*$limit;
