@@ -1,25 +1,23 @@
 <?php include('header.php');?>
 
-            <section id="one" class="wrapper style1">
-                <div class="inner">
-                <section id="three" class="wrapper style3 special">
-                    <div class="inner">
-                        <header class="major narrow ">
-                           <?php  <h2></h2>
-                            
-                                foreach ($data as $msgerror) {
-                                    echo '<p>'.$msgerror.'</p>';
-                                }
-                           
+<section id="one" class="wrapper style1">
+    <div class="inner">
+        <section id="three" class="wrapper style3 special">
+            <div class="inner">
+                <header class="major narrow ">
+                   <?php  
+                   ini_set('display_errors', 1);
+                   ini_set('display_startup_errors', 1);
+                   error_reporting(E_ALL);
+                   echo $post->getPost_id();
+                   echo $post->getPost_content();
+                   ?>
 
-                            </header>
-                             ?>
+               </div>
+           </section>
 
-                    </div>
-                </section>
+       </div>
+   </section>
 
-                </div>
-            </section>
-
-<?php include("footer.html");?>
+   <?php include("footer.html");?>
 

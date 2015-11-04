@@ -21,7 +21,7 @@ class DAL{
 		$res= BD::getInstance()->prepareAndExecuteQueryWithResult($req,$param);
 		$user=NULL;
 		foreach ($res as $data) {
-			$user=new User($data["username"],$data["display_name"],$data["role"],$data["password_hash"],$data["salt"]);
+			$user=new user($data["username"],$data["display_name"],$data["role"],$data["password_hash"],$data["salt"]);
 		}
 		return $user;
 	}
@@ -65,8 +65,18 @@ class DAL{
 			$images[]=new image($image["img_id"],$image["username"],$image["post_id"],$image["caption"],$image["file_path"],$image["location"],$image["coordinates"]);
 		}
 		return $images;
+	}
 
+	static function getPost($post_id){
+		$req='SELECT * FROM post WHERE post_id=?';
+		$param  = array(0  => array($post_id, PDO::PARAM_STR));
 
+		$res= BD::getInstance()->prepareAndExecuteQueryWithResult($req,$param);
+		$post = array();
+		foreach ($res as $post) {
+			$post=new post($post['post_id'],$post['username'],$post['post_title'],$post['post_content'],$post['date_time_posted']);
+		}
+		return $post;
 	}
 
 

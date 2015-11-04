@@ -20,7 +20,7 @@
                             }
                             echo '<ul class="actions">
                                 <li>
-                                    <a href="#" class="button alt">More</a>
+                                    <a name="button_more" type="submit" href="index.php?action=showadventure&id_adv='.$value->getPost_id().'" class="button alt">More</a>
                                 </li>
                             </ul>
                         </div>

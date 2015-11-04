@@ -26,11 +26,11 @@
 		}
 
 		function __construct($id,$un,$pt,$pc,$dt){
-			$this->date_time_posted=$dt;
 			$this->post_id=$id;
 			$this->username=$un;
 			$this->post_title=$pt;
 			$this->post_content=$pc;
+			$this->date_time_posted=$dt;
 		}
 
 

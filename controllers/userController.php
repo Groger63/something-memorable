@@ -24,12 +24,12 @@
 		}
 
 		protected function showadventure(){
+
 			global $rep, $view;
-			$data=array();
-			$data[0]="We're sorry, something somewhere went wrong...";
-			$data[1]="Adventure page not available yet";
-			$data[2]="user";
-			require_once ($view['error']);
+			$id_adv = $_REQUEST['id_adv'];
+			$post = postModel::getPost($id_adv);
+			require_once($view['adventure']);
+				
 		}
 
 		protected function error403(){

@@ -27,5 +27,10 @@
 		public static function getnbTotalposts(){
 			return count(self::getAllposts());
 		}
+
+
+		public static function getPost($post_id){
+			return DAL::getPost($post_id);
+		}
 	}
 ?>
