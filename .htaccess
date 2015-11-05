@@ -1,6 +1,10 @@
 RewriteEngine on
 
-RewriteRule Home	index.php
-RewriteRule Connexion	index.php?action=connexion
-RewriteRule Error	index.php?action=error
-RewriteRule Deconnexion	index.php?action=deconnexion
+
+RewriteRule ^([a-zA-Z0-9-]+)$ index.php?action=$1
+RewriteRule ^([a-zA-Z0-9-]+)/$ index.php?action=$1
+RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)$ index.php?action=$1&arg1=$2
+RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/$ index.php?action=$1&arg1=$2
+RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)$ index.php?action=$1&arg1=$2&arg2=$3
+RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/$ index.php?action=$1&arg1=$2&arg2=$3
+

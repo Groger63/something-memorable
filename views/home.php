@@ -20,7 +20,7 @@
                             }
                             echo '<ul class="actions">
                                 <li>
-                                    <a name="button_more" type="submit" href="index.php?action=showadventure&id_adv='.$value->getPost_id().'" class="button alt">More</a>
+                                    <a name="button_more" type="submit" href="showadventure/'.$value->getPost_id().'" class="button alt">More</a>
                                 </li>
                             </ul>
                         </div>
@@ -32,7 +32,7 @@
                     <ul>
                     <?php 
                         for($i=1;$i<=$data['pages'];$i++)
-                            echo '<li><a href="index.php?page='.$i.'">Page'.$i.'</a></li>';
+                            echo '<li><a href="home/'.$i.'">Page'.$i.'</a></li>';
                         ?>
                     </ul>
 

@@ -3,6 +3,7 @@
 	class user{
 		private $username;
 		private $displayname;
+		private $password;
 		private $role;
 		private $salt;
 
@@ -37,6 +38,12 @@
 		}
 		public function getDisplayname(){
 			return $this->displayname;
+		}
+		public function setPassword($f){
+			$this->password=$f;
+		}
+		public function getPassword(){
+			return $this->password;
 		}
 	}
 ?>

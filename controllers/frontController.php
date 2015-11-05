@@ -25,7 +25,7 @@
 			global $rep, $view,$actions;
 			$data[0]="We're sorry, something somewhere went wrong...";
 			$data[1]="This is a 404";
-			$data[2]="You must log in to access this page";
+			$data[2]="Page not found";
 			require_once ($view['error']);
 		}
 

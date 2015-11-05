@@ -13,8 +13,19 @@
 
 		static public function getUserWithoutPassword($username)
 		{
-			return DAL::getUserWithoutPassword($username);
+			return DAL::getUserWithoutPwd($username);
 		}
-			}
+
+		static public function existUser($username)
+		{
+			$user=DAL::getUserWithoutPwd($username);
+			return isset($user);
+		}
+
+		static public function addUser($username,$displayname,$role,$password,$salt)
+		{
+			DAL::addUser($username,$displayname,$role,$password,$salt);
+		}
+	}
 
 ?>

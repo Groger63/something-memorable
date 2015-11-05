@@ -21,8 +21,14 @@
                     $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'unknownuser' ;
 
                     if($role=="reader"||($role=="author"&&$post->getUsername()!=$username)){
-                      echo '<a href="index.php?action=vote&id_adv='.$post->getPost_id().'&username='.$_SESSION['username'].'">Vote for this story</a>';
-                    }
+                      echo '
+                        <form action="" method="POST">
+                            <input type="hidden" value="vote" name="action" id="action"/>
+                            <input type="hidden" name="id_adv" value="'.$post->getPost_id().'" id="action"/>
+                            <input type="hidden" name="username" value="'.$_SESSION['username'].'" id="action"/>
+                            <input type="submit" value="Vote for this story" name="vote" id="vote" />
+                        </form>';
+                     }
 
                    ?>
 

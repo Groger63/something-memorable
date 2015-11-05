@@ -14,7 +14,7 @@
 
                             </header>
                         <ul class="actions">
-                            <li><a href="index.php" class="button big alt">Get me back Home!</a></li>
+                            <li><a href="" class="button big alt">Get me back Home!</a></li>
                         </ul>
                     </div>
                 </section>

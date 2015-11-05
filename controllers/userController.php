@@ -17,7 +17,9 @@
 			$nbpostsPerPage=2;
 			$nbTotal = postModel::getnbTotalposts();//posts
 			$nbPages = ceil($nbTotal/$nbpostsPerPage);
-			$page=isset($_REQUEST['page']) ? $_REQUEST['page'] : 1 ;
+			$page=isset($_REQUEST['arg1']) ? $_REQUEST['arg1'] : 1 ;
+			if($page<1) $page=1;
+			if($page>$nbPages) $page=$nbPages;
 			$data['data']=postModel::getSomePosts($page);
 			$data['pages']=$nbPages;
 			require_once ($view['home']);
@@ -26,7 +28,7 @@
 		protected function showadventure(){
 
 			global $rep, $view;
-			$id_adv = $_REQUEST['id_adv'];
+			$id_adv = $_REQUEST['arg1'];
 			$post = postModel::getPost($id_adv);
 			require_once($view['adventure']);
 				
