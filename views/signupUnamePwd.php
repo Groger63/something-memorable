@@ -1,4 +1,4 @@
-<?php include('/../header.php');?>
+<?php include('header.php');?>
 
             <section id="one" class="wrapper style1">
                 <div class="inner">
@@ -44,4 +44,4 @@
                 </div>
             </section>
 
-<?php include("/../footer.html");?>
+<?php include("footer.html");?>

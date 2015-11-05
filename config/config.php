@@ -12,16 +12,16 @@ $rep=realpath(dirname(__FILE__)).'/../';
 // $host = "localhost";
 
 //DB Azure Quentin
-// $user="b75f54a35a10bd";
-// $password = "91023cc1";
-// $base = "db1508613";
-// $host = "eu-cdbr-azure-west-c.cloudapp.net";
+$user="b75f54a35a10bd";
+$password = "91023cc1";
+$base = "db1508613";
+$host = "eu-cdbr-azure-west-c.cloudapp.net";
 
 //DB localhostQuentin
-$user="root";
-$password = "";
-$base = "db1508613";
-$host = "localhost";
+// $user="root";
+// $password = "";
+// $base = "db1508613";
+// $host = "localhost";
 
 //DB amen.fr
 // $user="quchambefodb";
@@ -33,9 +33,9 @@ $host = "localhost";
 $view['error']='views/error.php';
 $view['home']='views/home.php';
 $view['adventure']='views/adventure.php';
-$view['signupUnamePwd']='views/signupViews/signupUnamePwd.php';
-$view['signupMoreinfo']='views/signupViews/signupMoreinfo.php';
-$view['signupComplete']='views/signupViews/signupComplete.php';
+$view['signupUnamePwd']='views/signupUnamePwd.php';
+$view['signupMoreinfo']='views/signupMoreinfo.php';
+$view['signupComplete']='views/signupComplete.php';
 
 $role=array('user','reader','author','admin');
 $actions=array('logout','deleteaccount','changepassword',
