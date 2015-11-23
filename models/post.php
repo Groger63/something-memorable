@@ -20,6 +20,10 @@
 		public function getDate_time_posted(){
 			return $this->date_time_posted;
 		}
+		private $date_last_edited;
+		public function getDate_last_edited(){
+			return $this->date_last_edited;
+		}
 		private $images;
 		public function getImagesPost(){
 			return $this->images;
@@ -28,8 +32,12 @@
 		public function getVote_post(){
 			return $this->votes;
 		}
+		private $comments;
+		public function getComments(){
+			return $this->comments;
+		}
 
-		function __construct($id,$un,$pt,$pc,$dt,$img,$votes){
+		function __construct($id,$un,$pt,$pc,$dt,$img,$votes,$date_last_edited,$comments){
 			$this->post_id=$id;
 			$this->username=$un;
 			$this->post_title=$pt;
@@ -37,6 +45,8 @@
 			$this->date_time_posted=$dt;
 			$this->images=$img;
 			$this->votes=$votes;
+			$this->comments=$comments;
+			$this->date_last_edited=$date_last_edited;
 		}
 
 

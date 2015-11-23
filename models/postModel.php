@@ -46,6 +46,10 @@
 			return DAL::getPost($post_id);
 		}
 
+		public static function addPost($username,$post_title,$post_content){
+			return DAL::addPost($username,$post_title,$post_content);
+		}
+
 		public static function deletePost($post_id){
 			//delete img
 			//first get the post

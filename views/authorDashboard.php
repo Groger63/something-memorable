@@ -7,6 +7,7 @@
       <div class="inner">
         <header class="major narrow ">
           <h1>Author DashBoard</h1>
+          <h2><a href='addpost' >New post</a></h2>
         </header>
         <h2>My stories</h2>
         <?php

@@ -19,6 +19,8 @@
                     echo (($count%2 == 0) ? 'right"':'left"').'>
                         <div class="content">
                             <h2>'.$value->getPost_title().'</h2>
+
+                     <p>Posted:'.$value->getDate_time_posted().'</p>
                             <p>'.$value->getPost_content().'</p>';
                             foreach ($value->getImagesPost() as $img) {
                                 echo '<span class="image"><a target="_blank" href="'.$img->getFile_path().'"><img src="'.$img->getFile_path().'"></img></a></span>';

@@ -32,17 +32,6 @@ class unregisteredUserController extends userController{
 				global $rep, $view;
 
 
-				if(empty($_FILES) && empty($_POST) && isset($_SERVER['REQUEST_METHOD']) && strtolower($_SERVER['REQUEST_METHOD']) == 'post'){ //catch file overload error...
-			        $postMax = ini_get('post_max_size'); //grab the size limits...
-			        $data[0]="<p style=\"color: #F00;\">\nPlease note files larger than {$postMax} will result in this error!<br>Please be advised this is not a limitation in the Website, This is a limitation of the hosting server.<br>For various reasons they limit the max size of uploaded files, if you have access to the php ini file you can fix this by changing the post_max_size setting.<br> If you can't then please ask your host to increase the size limits, or use the FTP uploaded form</br>Have a nice day, and don't forget your towel.</p>"; // echo out error and solutions...
-        
-					require_once ($view['error']);//addForm(); //bounce back to the just filled out form.
-				}
-
-
-
-
-
 				if(isset($_POST['signup'])){
 					switch($_POST['signup']){
 						case 'step1':
@@ -78,6 +67,7 @@ class unregisteredUserController extends userController{
 						}else{
 							///create a "tools" file, this kind of check could be used elsewhere
 							if($_FILES['profilepic']['name']!=NULL){ //if you upload a file
+								$data['uploadfile']=NULL;
 								if($_FILES['profilepic']['error']>0){
 									if($_FILES['profilepic']['error']==UPLOAD_ERR_FORM_SIZE){
 										$data['uploadfile']='The file must not be bigger than 5mo.';
@@ -92,9 +82,13 @@ class unregisteredUserController extends userController{
 								}
 
 								$uploaddir = './images/users/'.$username.'/';//create the directory of theprofile pic
-								$uploadfile = $uploaddir . basename($_FILES['profilepic']['name']); 
 								mkdir($uploaddir, 0777, true);
-								$filename=$_FILES['profilepic']['name'];//give this pic a name
+
+									//give this image a random name (for multiple images)
+								$temp = explode(".", $_FILES["profilepic"]["name"]);
+								$newfilename = round(microtime(true)) . '.' . end($temp);
+								$uploadfile = $uploaddir . $newfilename;
+								$filename=$newfilename;
 
 								if (!move_uploaded_file($_FILES['profilepic']['tmp_name'], $uploadfile)) { //if error moving file
 
@@ -110,7 +104,7 @@ class unregisteredUserController extends userController{
 								}
 							}
 							else $filename=NULL;
-							$displayname=isset($_POST['displayname']) ? $_POST['displayname'] : 'Anonymous';
+							$displayname=$_POST['displayname']!='' ? $_POST['displayname'] : 'Anonymous';
 							$pwd_hash=$_POST['password_hash'];
 							$profilepic=$filename;
 							$role='reader';

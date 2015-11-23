@@ -8,13 +8,15 @@
         <h1>Edit post</h1>
           <form   enctype="multipart/form-data" method="post" action="editpost">
            <?php  
-
+           if(isset($data['error'])){
+            echo $data['error'].'<br>';
+          }
            echo '
            <p>Edit post Title:</p><input value="'.$post->getPost_title().'" name="post_title" type="text">
            <p>Edit post Content:</p><textarea rows="20" name="post_content" >'.$post->getPost_content().' </textarea>
            <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
            <div>';
-                     if(isset($data['uploadfile'])){
+           if(isset($data['uploadfile'])){
             echo $data['uploadfile'].'<br>';
           }
           echo 'Upload new Picture
@@ -38,13 +40,6 @@
               </div>
             </form>';
           }
-          echo'
-             <form   enctype="multipart/form-data" method="post" action="editpost"> ';
-
-
-          echo '
-
-            </form>';
           ?>
 
         </div>

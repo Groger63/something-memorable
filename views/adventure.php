@@ -6,6 +6,14 @@
             <div class="inner">
                 <header class="major narrow ">
                    <?php  
+                     echo '<p>Posted:'.$post->getDate_time_posted().'</p>';
+                     if($post->getDate_time_posted()!=$post->getDate_last_edited()){
+                      echo '<p>Edited:'.$post->getDate_last_edited().'</p>';
+                     }
+
+
+
+                     echo '<p>By:<a href=search/author/'.$post->getUsername().'>'.$post->getUsername().'</a></p>';
                      echo '<h1>'.$post->getPost_title().'</h1>';
                      echo '<p>'.$post->getPost_content().'</p>';
                       echo '<div class="image-grid">';
@@ -32,7 +40,32 @@
                             <input type="hidden" name="id_adv" value="'.$post->getPost_id().'" id="action"/>
                             <input type="hidden" name="username" value="'.$_SESSION['username'].'" id="action"/>
                             <input type="submit" value="Vote for this story" name="vote" id="vote" />
+                        </form>';///vote
+
+                        if($post->getComments()!=NULL){
+                          foreach ($post->getComments() as $comment) {
+                            echo'
+                              <div >
+                                <p>Comment posted by:'.$comment->getUser()->getDisplayname().'</p><p>'.
+
+                             $comment->getMessage();'</p>'; //
+                          }
+                        }
+
+                        echo '
+                        <form action="" method="POST">
+                          <p>Type a comment</p>';
+                             if(isset($data["comment"]))echo $data["comment"];
+                             echo '
+                            <textarea > </textarea>
+                            <input type="hidden" value="commentpost" name="action" id="action"/>
+                            <input type="hidden" name="id_adv" value="'.$post->getPost_id().'" id="action"/>
+                            <input type="hidden" name="username" value="'.$_SESSION['username'].'" id="action"/>
+                            <input type="submit" value="Comment this story" name="Comment" id="vote" />
                         </form>';
+
+
+
                      }
 
                    ?>

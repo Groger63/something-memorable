@@ -44,5 +44,11 @@
             </form>
             </nav>
 
+                <?php 
+                    if(isset($data['information'])){
+                        echo '<h2>'.$data['information'].'</h2>';
+                    }
+                ?>
+
 
 
