@@ -12,10 +12,10 @@ $rep=realpath(dirname(__FILE__)).'/../';
 // $host = "localhost";
 
 //DB Azure Quentin
-$user="b75f54a35a10bd";
-$password = "91023cc1";
-$base = "db1508613";
-$host = "eu-cdbr-azure-west-c.cloudapp.net";
+// $user="b75f54a35a10bd";
+// $password = "91023cc1";
+// $base = "db1508613";
+// $host = "eu-cdbr-azure-west-c.cloudapp.net";
 
 //DB localhostQuentin
 // $user="root";
@@ -24,10 +24,10 @@ $host = "eu-cdbr-azure-west-c.cloudapp.net";
 // $host = "localhost";
 
 // //DB amen.fr
-// $user="quchambefodb";
-// $password = "patrick12345";
-// $base = "quentindb";
-// $host = "hostingmysql324.amen.fr";
+$user="quchambefodb";
+$password = "patrick12345";
+$base = "quentindb";
+$host = "hostingmysql324.amen.fr";
 
 //Liste des vues
 $view['error']='views/error.php';
