@@ -8,6 +8,11 @@
                    <?php  
                      echo '<h1>'.$post->getPost_title().'</h1>';
                      echo '<p>'.$post->getPost_content().'</p>';
+                      echo '<div class="image-grid">';
+                     foreach ($post->getImagesPost() as $img) {
+                       echo '<a target="_blank" class="image" href="'.$img->getFile_path().'"><img src="'.$img->getFile_path().'"></img></a>';
+                      }
+                      echo '</div>';
                      if($post->getVote_post()!=NULL){
                       echo '<P>';
                         foreach ($post->getVote_post() as $vote) {

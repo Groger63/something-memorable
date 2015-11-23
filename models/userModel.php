@@ -22,9 +22,9 @@
 			return isset($user);
 		}
 
-		static public function addUser($username,$displayname,$role,$password,$salt)
+		static public function addUser($username,$displayname,$role,$password,$profilepic)
 		{
-			DAL::addUser($username,$displayname,$role,$password,$salt);
+			DAL::addUser($username,$displayname,$role,$password,$profilepic);
 		}
 	}
 

@@ -1,5 +1,13 @@
 <?php include('header.php');?>
-
+        <!-- Banner -->
+            <section id="banner">
+                <i class="icon fa-diamond"></i>
+                <h2>This is our Blog website</h2>
+                <p>Just wait for it, it's gonna be legen...DARY</p>
+                <ul class="actions">
+                    <li><a  class="button big special">Pointless Button</a></li>
+                </ul>
+            </section>
             <section id="one" class="wrapper style1">
                 <div class="inner">
                                                 <?php

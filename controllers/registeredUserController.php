@@ -1,6 +1,6 @@
 <?php
 	abstract class registeredUserController extends userController{
-		protected  $SPECIFIC_ACTION=array('logout','deleteaccount','changepassword','changedisplayname','changeprofilepic');
+		protected  $SPECIFIC_ACTION=array('logout','deleteaccount','changepassword','changedisplayname','changeprofilepic','manageaccount');
 
 	
 		protected function logout(){
@@ -45,6 +45,14 @@
 			$data[1]="You can't change your profile picture yet";
 			$data[2]="registered user";
 			require_once ($view['error']);
+		}
+
+		protected function manageaccount(){
+			global $rep, $view;
+			$data=array();
+			
+			
+			require_once ($view['manageaccount']);
 		}
 
 	}

@@ -1,5 +1,6 @@
 <?php
 	 class readerController extends registeredUserController{
+	 	
 		public  $READER_ACTION=array('vote','commentpost','editcomment','deletecomment');
 
 		public function __construct($action){
